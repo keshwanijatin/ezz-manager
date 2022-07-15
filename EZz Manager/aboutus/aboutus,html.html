@@ -1,0 +1,403 @@
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+</head>
+
+<script>   'use strict';
+    
+    $(document).ready(function () {
+        $(window).bind('scroll', function (e) {
+            parallaxScroll();
+        });
+    });
+    
+    function parallaxScroll() {
+        const scrolled = $(window).scrollTop();
+        $('#team-image').css('top', (0 - (scrolled * .20)) + 'px');
+        $('.img-1').css('top', (0 - (scrolled * .35)) + 'px');
+        $('.img-2').css('top', (0 - (scrolled * .05)) + 'px');
+    } </script>
+
+<style>  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic);
+    
+        body{
+
+            background-color: #090b0f;
+        }
+    .product-navbar {
+        height: 40px;
+        width: 100%;
+        background: #090b0f;
+        border-bottom: 1px solid #090b0f;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+   }
+    .product-navbar .product-navbar-centered {
+        max-width: 90vw;
+        height: 20px;
+        margin: 0 5vw;
+   }
+    .product-navbar .product-navbar-centered ul {
+        margin: 0;
+        padding: 0;
+   }
+    .product-navbar .product-navbar-centered ul li {
+        float: left;
+        list-style: none;
+        margin-right: 30px;
+        padding-top: 9px;
+   }
+    .product-navbar .product-navbar-centered ul li a {
+        color: #6f7782;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: none !important;
+   }
+    .hero {
+        background: #171b23;
+        padding-left: 0;
+        padding-right: 0;
+   }
+    .hero .container {
+        margin: 0 5vw;
+        padding: 0 0vw;
+        max-width: 90vw;
+   }
+    .hero .navbar-brand {
+        color: #fff;
+   }
+    .hero .navbar-brand img {
+        margin-right: 7px;
+        margin-top: -7px;
+   }
+    #about-main {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0 auto;
+   }
+    #about-main .row {
+        margin-left: 0;
+        margin-right: 0;
+   }
+    #about-main .jumbotron {
+        width: 100%;
+        height: 530px;
+        background: #171b23;
+        position: relative;
+        margin: 0;
+        z-index: 3;
+        border-radius: 0px;
+   }
+    #about-main .jumbotron .img-layer-container {
+        position: relative;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+   }
+    #about-main .jumbotron .img-layer-container img {
+        max-width: 95vw;
+   }
+    #about-main .jumbotron .img-layer-container .team-image {
+        position: absolute;
+   }
+    #about-main .jumbotron .img-layer-container .team-image img {
+        position: relative;
+        z-index: 3;
+   }
+    #about-main .jumbotron .img-layer-container .circles-container {
+        position: absolute;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+   }
+    #about-main .jumbotron .img-layer-container .circles-container .img-1 {
+        position: absolute;
+        z-index: 2;
+   }
+    #about-main .jumbotron .img-layer-container .circles-container .img-2 {
+        position: absolute;
+        z-index: 5;
+   }
+    #about-main .jumbotron .jumbotron-inner {
+        max-width: 1350px;
+        margin: 0 auto;
+   }
+    #about-main .jumbotron .jumbotron-inner a {
+        text-decoration: none;
+   }
+    #about-main .jumbotron .jumbotron-inner .top-box {
+        max-width: 950px;
+        margin: 0 auto;
+   }
+    #about-main .jumbotron .jumbotron-inner .top-box .content-box {
+        margin: 0 50px 35px;
+   }
+    #about-main .jumbotron .jumbotron-inner .top-box .content-box h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 20px;
+   }
+    #about-main .jumbotron .jumbotron-inner .top-box .content-box p {
+        text-align: center;
+        color: #6f7782;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 15px;
+   }
+    @media (max-width: 1401px) {
+        #about-main .jumbotron {
+            height: 595px !important;
+       }
+        #about-main .jumbotron .jumbotron-inner {
+            max-width: 900px;
+       }
+        #about-main .jumbotron .jumbotron-inner .top-box {
+            max-width: 900px;
+       }
+        #about-main .jumbotron .jumbotron-inner .top-box .content-box {
+            margin-top: 30px;
+            margin-bottom: 50px;
+       }
+        #about-main .jumbotron .jumbotron-inner .top-box .content-box h3 {
+            font-size: 35px;
+            margin: 5px 0px 20px 0px;
+            color: #6f7782;
+            font-weight: 300;
+       }
+   }
+    @media (max-width: 1000px) {
+        #about-main .jumbotron .img-layer-container {
+            width: 100%;
+       }
+   }
+    @media (max-width: 815px) {
+        #about-main .jumbotron .jumbotron-inner {
+            max-width: 600px;
+       }
+   }
+    @media (max-width: 640px) {
+        #about-main .jumbotron {
+            height: 400px !important;
+       }
+        #about-main .jumbotron .jumbotron-inner {
+            max-width: 550px;
+            padding: 0 20px;
+       }
+        #about-main .jumbotron .img-1, #about-main .jumbotron .img-2, #about-main .jumbotron .team-image {
+            display: none;
+       }
+   }
+    @media (max-width: 420px) {
+        #about-main .jumbotron .jumbotron-inner {
+            max-width: 600px;
+            padding: 0 20px;
+       }
+   }
+    @media (max-width: 400px) {
+        #about-main .jumbotron .jumbotron-inner .top-box .content-box {
+            margin: 30px 0;
+       }
+        #about-main .jumbotron .jumbotron-inner .top-box .content-box h1 {
+            font-size: 35px;
+       }
+        #about-main .jumbotron .jumbotron-inner .top-box .content-box p {
+            font-size: 16px;
+       }
+   }
+    #about-main .story-container {
+        height: 100%;
+        width: 100%;
+        margin-top: 150px;
+   }
+    @media (max-width: 640px) {
+        #about-main .story-container {
+            margin-top: 80px;
+       }
+   }
+    #about-main .story-container .container-divider {
+        margin-top: 100px;
+   }
+    @media (max-width: 640px) {
+        #about-main .story-container .container-divider {
+            margin-top: 50px;
+       }
+   }
+    #about-main .story-container .need-for-dx-container, #about-main .story-container .our-tech-container, #about-main .story-container .origin-story-container, #about-main .story-container .today-container {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 0 20px;
+   }
+    @media (max-width: 815px) {
+        #about-main .story-container .need-for-dx-container, #about-main .story-container .our-tech-container, #about-main .story-container .origin-story-container, #about-main .story-container .today-container {
+            width: 100%;
+       }
+   }
+    #about-main .story-container .need-for-dx-container .img-container, #about-main .story-container .our-tech-container .img-container, #about-main .story-container .origin-story-container .img-container, #about-main .story-container .today-container .img-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+   }
+    #about-main .story-container .need-for-dx-container .img-container img, #about-main .story-container .our-tech-container .img-container img, #about-main .story-container .origin-story-container .img-container img, #about-main .story-container .today-container .img-container img {
+        margin: 50px auto;
+   }
+    #about-main .story-container .need-for-dx-container h3, #about-main .story-container .our-tech-container h3, #about-main .story-container .origin-story-container h3, #about-main .story-container .today-container h3 {
+        color: #074e8c;
+   }
+    #about-main .story-container .need-for-dx-container p, #about-main .story-container .our-tech-container p, #about-main .story-container .origin-story-container p, #about-main .story-container .today-container p {
+        font-size: 15px;
+        margin-top: 20px;
+        color: #676a6c;
+   }
+    @media (max-width: 640px) {
+        #about-main .story-container .need-for-dx-container p, #about-main .story-container .our-tech-container p, #about-main .story-container .origin-story-container p, #about-main .story-container .today-container p {
+            font-size: 13px;
+       }
+   }
+    #about-main .story-container .need-for-dx-container ul, #about-main .story-container .our-tech-container ul, #about-main .story-container .origin-story-container ul, #about-main .story-container .today-container ul {
+        margin-top: 30px;
+        list-style-image: url('https://apimatic.io/img/theme/aboutUs/bullet.svg');
+   }
+    #about-main .story-container .need-for-dx-container ul li, #about-main .story-container .our-tech-container ul li, #about-main .story-container .origin-story-container ul li, #about-main .story-container .today-container ul li {
+        line-height: 25px;
+        padding-left: 5px;
+        color: #676a6c;
+   }
+      </style>
+<body>
+    <div class="product-navbar">
+        <div class="product-navbar-centered">
+            <ul>
+                <li>
+                    <a href="file:///C:/EZz%20Manager/title/tailwind-admin-main/index.html" class="">
+                        <span>
+                            Home
+                         
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="file:///C:/EZz%20Manager/feedbackezz/FeedbackForm-master/index.html" class="">
+                      Feedback
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="navbar hero" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <p>
+                      <img src="https://i.pinimg.com/originals/62/8f/60/628f602b0aff85b0b1bc800657ad1ce7.jpg" width="75" height="75">
+                      
+                    </p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div id="about-main">
+        <div class="jumbotron">
+            <div class="jumbotron-inner">
+                <div class="top-box">
+                    <div class="content-box">
+                        <h1>
+                             About EzZ Manager
+                        </h1>
+                        <p>
+                            Ezz Manager is a manger specially desinged for you !  <br /> Our Motive is to Make this place a fitter and Smarter 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="img-layer-container">
+                <div class="team-image" id="team-image">
+                    <img src="https://www.wikihow.com/images/thumb/d/d3/Be-Chill-Step-19-Version-4.jpg/v4-460px-Be-Chill-Step-19-Version-4.jpg" />
+                </div>
+
+                <div class="circles-container">
+                    <div class="img-1">
+                        <img src="https://apimatic.io/img/theme/aboutUs/Circles-1-1.svg" />                        
+                    </div>
+                    <div class="img-2">
+                        <img src="https://apimatic.io/img/theme/aboutUs/Circles-2-1.svg" />                        
+                    </div>                    
+                </div>           
+            </div>
+        </div>
+        <div class="story-container">
+            <div class="need-for-dx-container">
+                <h3 class="text-center">
+                   Expense trackor
+                </h3>
+                <p>
+                    Personal finance management is an important part of people’s lives. However, everyone does not have the knowledge or time to manage their finances in a proper manner. And, even if a person has time and knowledge, they do not bother with tracking their expenses as they find it tedious and time-consuming. Now, you don’t have to worry about managing your expenses, as you can get access to an expense tracker that will help in the active management of your finances.
+                </p>
+                <div class="img-container">
+                    <img src="https://blog.coupler.io/wp-content/uploads/2020/08/1-personal-expenses-tracker.png" alt="apimatic developer experience process" class="img-responsive"/>
+                </div>
+            </div>
+            <div class="container-divider"></div>
+            <div class="our-tech-container">
+                <h3 class="text-center">
+                    Ezz HEalth
+                </h3>
+                <p>
+                    Health information management (HIM) is information management applied to health and health care. It is the practice of analyzing and protecting digital and traditional medical information vital to providing quality patient care. With the widespread computerization of health records, traditional (paper-based) records are being replaced with electronic health records (EHRs). The tools of health informatics and health information technology are continually improving to bring greater efficiency to information management in the health care sector. Both hospital information systems and Human Resource for Health Information Systems (HRHISs) are common implementations of HIM.
+                </p>
+                <div class="img-container">
+                    <img src="https://topflightapps.com/wp-content/uploads/2019/12/Calorie-counter-app-market-2017-2023-1024x431.jpg" alt="apimatic code generation engine" class="img-responsive"/>
+                </div>
+            </div>
+            <div class="container-divider"></div>
+            <div class="origin-story-container">
+                <h3 class="text-center">
+                    Newz Inshorts
+                </h3>
+                <p>
+                   Newz Inshorts is a website where you can get all the latest and Treanding news that you want sorted according to your preference it is ageat website to gather all the information that you need in the shortest time possible. As we know the world is getting busier and busier everyday so we take the incative to make your life a little easy by providing this website which can help you to go through your news in the least amount of time possible!!
+                </p>
+                <p>
+                   
+                </p>
+                <p>
+                    As its name implies, "news" typically connotes the presentation of new information.[5][6] The newness of news gives it an uncertain quality which distinguishes it from the more careful investigations of history or other scholarly disciplines.[6][7][8] Whereas historians tend to view events as causally related Manifestations of underlying processes, news stories tend to describe events in isolation, and to exclude discussion of the relationships between them.[9] News conspicuously describes the world in the present or immediate past, even when the most important aspects of a news story have occurred long in the past—or are expected to occur in the future. To make the news, an ongoing process must have some "peg", an event in time which anchors it to the present moment.[9][10] Relatedly, news often addresses aspects of reality which seem unusual, deviant, or out of the ordinary.[11] Hence the famous dictum that "Dog Bites Man" is not news, but "Man Bites Dog" is.    
+                
+                </p>
+            </div>
+            <div class="container-divider"></div>
+            <div class="today-container">
+                <h3 class="text-center">
+            Basic Infor about Ezz Manager
+                </h3>
+                <p>
+                It is just a simple     
+                
+                </p>
+                <ul>
+                    <li>Create and store definitions of their APIs</li>
+                    <li>Generate SDKs for their APIs for 10 platforms</li>
+                    <li>Keep these SDKs in sync with API updates</li>
+                    <li>Convert API descriptions into multiple formats (Swagger, API Blueprint, RAML etc.)</li>
+                    <li>Generate beautiful documentation for their APIs and SDKs</li>
+                    <li>Generate complete Developer Experience API Portals</li>
+                </ul>
+            </div>
+            <div class="container-divider"></div>
+        </div>
+    </div>  
+</body>
+</html>

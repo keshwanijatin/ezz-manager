@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  /* css grid */
+
+  .section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+  }
+
+
+  .row {
+    zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */
+  }
+
+  .row:before,
+  .row:after {
+    content: "";
+    display: table;
+  }
+
+  .row:after {
+    clear: both;
+  }
+
+
+
+  .col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+  }
+
+  .span-1-of-2 {
+    width: 48%;
+  }
+
+  .span-1-of-3 {
+    width: 31.7%;
+  }
+
+  @media only screen and (max-width: 480px) {
+
+    .span-1-of-2 {
+      width: 100%;
+    }
+
+    .span-1-of-3 {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .span-1-of-2 {
+      width: 100%;
+    }
+  }
+
+  /* end css grid */
+  @media only screen and (max-width: 800px) {
+    .main-nav {
+      font-size: 80%;
+      margin-top: 0px;
+
+    }
+
+    .logo {
+      display: none;
+    }
+
+  }
+
+  @media only screen and (max-width: 510px) {
+    .main-nav {
+      font-size: 60%;
+    }
+  }
+
+
+  * {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    background-color: black;
+    color: #555;
+    font-family: "lato", sans-seriff;
+    font-size: 20px;
+    overflow-x: hidden;
+  }
+
+  .page-wrapper {
+    max-wdith: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .row {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header {
+    background-color: brown;
+    position: fixed;
+    width: 100%;
+
+
+
+  }
+
+  .logo {
+    height: 120px;
+    width: auto;
+    float: left;
+    margin-top: -20px;
+    padding: 20px;
+    margin-left: 50px
+  }
+
+  .main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 40px;
+
+  }
+
+  .main-nav li {
+    display: inline-block;
+  }
+
+  .main-nav li a {
+    color: black;
+    font-style: inherit;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-size: 120%;
+    text-decoration: none;
+    padding: 40px
+  }
+
+  #Home {
+    min-height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1743827/20_fitness.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+
+  h1 {
+    margin-top: 50px;
+    font-size: 240%;
+    color: white;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+
+  }
+
+  h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    letter-spacing: 1px;
+    text-decoration: underline #555
+  }
+
+  h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+  }
+
+  .sign-up {
+
+    text-align: center;
+    padding-top: 120px;
+
+  }
+
+  .sign-up p {
+    font-size: 120%;
+    padding: 10px;
+    color: #fff;
+    margin-top:
+  }
+
+  #form {
+    margin-top: 25px;
+
+  }
+
+  input[type=email] {
+    padding: 7px;
+    width: 20%;
+    border: 2px solid #200 text-align: center;
+  }
+
+  #submit {
+    background: grey;
+    color: #fff;
+    padding: 8px;
+    width: 12%;
+    margin-left: 20px;
+    border-radius: 200px;
+    font-size: 90%;
+
+  }
+
+  @media only screen and (max-width: 900px) {
+    #submit {
+      width: 20%;
+      font-size: 65%;
+    }
+  }
+
+  #how-it-works {
+    background-color: #f4f4f4;
+
+
+  }
+
+  .works-step {
+    padding: 30px;
+  }
+
+  .works-step div {
+    padding: 5px;
+    float: left;
+    color: #fff;
+    border: 2px solid #200 border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 25px;
+    background-color: #2022ed;
+
+  }
+
+  .plan-box {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    width: 90%;
+    margin-left;
+    5%;
+    box-shadow: 0 2px 2px #efefef;
+
+  }
+
+  .plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 200%;
+    text-align: center;
+  }
+
+  .plan-box div:last-child {
+    text-align: center;
+    border: 0;
+  }
+
+  .plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .plan-price {
+    font-size: 150%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #200;
+  }
+
+  .plan-price span {
+    font-size: 60%;
+  }
+
+  .plan-box ul {
+    list-style: none;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .plan-box ul li {
+    padding: 15px;
+  }
+
+  .btn {
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 8px;
+    color: #fff;
+    background-color: #000;
+
+  }
+</style>
+
+<body>
+  <div id="page-wrapper">
+
+
+    <header id="header">
+      <nav id="navbar">
+        <div class="row">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYUAAACBCAMAAAAYG1bYAAAAflBMVEUAAAD////n5+cfHx9xcXHc3NyQkJDk5OQVFRVbW1u2traurq4nJye7u7vU1NTIyMjt7e1BQUE5OTkwMDCcnJz29vb4+PjX19fw8PCZmZnGxsZsbGxNTU1gYGCnp6d3d3eHh4cqKip/f39ISEgQEBA9PT1WVlaLi4sTExN2dnZGXpwxAAAJn0lEQVR4nO2d6VryMBCFS1kKyFJ2lMUii3r/N/hRFMXmJJk2M/na5+n7G5uYk2YmM5M0CGpqampqampqampqamrKzqz12fLJpmnp0GQ7AUxVZoCBSlNhcDK1390eQftnWgcOtA4ojR6eGn7ZmEU4h4sYEKpEgLbKKkt7aOzA62JdvAOgfdCBBDS7ib2qMDersJHvwdbYgaF4+yO4HMzG4g0/YJ6JwV68Ay1zByLp9uOZpuVn6ZYfaKur4iNt6fYt7+J2Idz+8qJte7cWbvsB44Jwlu7Ii1mEoCPcfuPN9N+Lv4g/fJoG4U248bbRP7rSF+7A3tj62ZuNNvZD2CwsJhYRmsKzcWxp/1O2+V/ahk50R7JtW9zkq1mQbT+07ZYC4QH4YX3Q92GyFG26YxuD4F20/aXZSU6RXpJ/2On7IPtCWpzklBfRDrzaO3CW9tHuPOv7IGobV9blIOiKmgWLk/yFuKv+jWFKSnYhtlnmKzvJFdHmJH/hyzBE2jl5FHwdl1bLHMjuFiLzdlWnwujSc2W32by+74ft8M8c007KR9O0jKPVS38/f37u5OUdxYLsljn4G0RahNFo+FSsA+CdXtstM1SBYMyoDHqdB7unjeT87Bba++Qys22w9IC3uk/q5n3TtBzPP4+0uYu4gHfauFk19J1RhZTjz0R70vyi+zWF4qdt16kl8CqMSE+8fL2y7fepU/szYONJljlFWIVfZ1y3bzvfpuFcF3OkAhb3+Ez/y5DgT5oBMWr6WIqrcA8axpp3PTULbeLyaWhEHYOlYYvySDp8fbf38ArIm1kCyY/IqxBsvxZezaBcV5Kx8xhMQVQ2of3pITJuZoiA3e/6SP9zDyoEs9vSj//VU2QNdhFYqYOgs0NZdkRPysgFbDkoTvIdHyoEg5H2ydvGuLhbdAfsvkfUv+0wvAmzUO1Arqd6USE4XV3WEI72e9t5OULROJ0VUns2Ngf/SYBAVL5x9KPCbbpCTzBxdY6CoKeOgSHDmGHmvhyh/AghfPWILxWuXYX7tg/nB89AqsqUYfyL+3KILDMlfPWINxWCvdCjwZ6ZaplZQKUDeSxzij8VAks1SkGAo87gdNEZgD1z7lXOowoiJOoYhO6mJgdgz0wKX/2h4iqA3MCCbJk5mKsijPLbmmqrMAWOOt0yM9BS218XiApWWwWwHDC4/3SOYM/cK/CcbGqiUioAy0zLMDKBMtZJkQdVWQVgmYkZRiZATiO/ZU6psAogubVwDpHnAVnmYk+qrgoohOacq8kDsMyhofjNRGVVOAHLTM4wcnAEOY2iTnJlVQAhNK99b4KSi8JOclVVACG0HBlGBoBlLu4kV1QFYJljr5YZnIRySFdVUwVQdrKUCRZqAJY5cghfVVMFkNzya5nVnMaiyJ75TiVV+O+WGVQbOIWvqqjCqzoG7XwZRkdYLXNKBVUAIbR1zgyjG6AO0DF8VT0VUAgtb4bRiY06C1wsc0r1VACW+d1n++BgrHNiqXIqgBCa1z5/AMvsHL7KquA1Pl8A4KibTvHyA3Ia7k5yVoXlaoVumiEjnOoCp3JNh3j5AXWADBOX+2ifbJqlC7rrslvKDajQjxgKy7hVkK0F+t+W+aBGs1mcZG4VRAMJIIRWLMNYFGCZWZxkZhUWOY5O5KalGoUCtT8OgAp997L7FGYVJF0skNwiHl1jAlQbMDnJvCrQK9bzc1CXA+rRNR5AHSDD4YsbvCoIFkuDPPPSaxkeqM3OWyCvhVWFoiUIFER2SzkYqCPF9+azqiAYVJNbk4kAJ5nvVeRUgcdfgOzU5cBvsh8klhjDBIwqCAYvQG029aIPHkDJB8PZ1B/YVFgkfJ3KcgKnpryW4YGSD9eUwh+yKkT9YjCc1dTz3y0zKPlgdZKzKgiu7YUBltlvAB4UYyasDWRV8DrHaIA4pv1yTE6AZWbeGJVfBXDTiN8CeWCZucNX5VdBIsOYh54auIjdLrRSKb0KII7p9egaKsZkD1+VXQVQ++P1UDk6JsFwdUaGkqsAvlLi1zIDJ1kgsVRuFcCXGSSD5yrASR65X6CiUGoVWM/LFAFZZonEUqlVYK/KzQm69EckblxmFdB5Ga8dAOErfsucUmIV0ElWr9e9AMsslNMorwog2e/XMoMyPKlizNKqgCxz4rMDIHy1kHoVS6sCyDB6vYgNWWaxko+yqgAK5P1aZhC+krHMKSVVAXyrJ+QOoRkBTrJgtUE5VQC1P34rwED4iqsCDFFKFdC3DBKfHQBH1/JcXp6bUqoALLPX2mxwqNz2VVw3yqgCyDDSPivCBDpULpuP96gCNQwGMoyh19pskFgSrgP0p8IbcTqB2h/SB7/YAOEr6TpAbyokxD3PgePGZBfQFanS1Qa+VLi6frT5xHJjsoYJoXQCWWauaoOmTk1PKly3wivSD9G3DLgsc4fwz6HwFdeYfPR1KSo/KqQxYlIUCH1liGvP/EYxL2DPzFYHOIx15zu8qHD71xLCD9H3rrn2zJ+N2F43AMJXEdfRmKHe0/KgQve21BM+Nv37MccHuCzzhnLlLCj5oPSbRN+QM5dXYfrVREj4KcgwcjnqbxRB0eXlTJb5dF0PltogiLgKve/5Tbj7GH3/j6cTg9uaaMvUNYGTzFRt0Esfrf9kkrQKnfv0su/ZQIZxwWKZp8+3jWBoc5VB+Ionp9H7svl6/0Ty/EJ30vl9vNXIok+Ou++ZP6avL98JbNviBpxk/bfByTSPnXtYKtH+KKvCPvjoutIczI67t+enx2cvbbP6DC4v3wfNggwOs8lllzz3V7/aWiYYuBOxsTsV78D0eGm9z4e//5bhdorsUriI3AnDeJ2d2LaK/y6wzI34+qiCxPE6E4+yFHBswavYKN5+2oHME/VX+DTBDBTBFoUAcUxmYmP76INfzOjNApwBEliuMQIZRm7MhhaEr7jR+7ygJlkEy94HZBjZSUwdAJaZG4NZQKuxBLExIjcBe2Z2TPMAhK/Y0acLQf2ZDMbloOljLpicTlAgz4/WLKDNogxGLxHEMfkxREZRyQc/uiASOrMlhGn7BTKMAhiCSF6GQRcGmPkyCtcuGK5zAnFMAZb6HoDwlQARbnznwyR+YzgLBo6uSaDfLXhyE3FYEOQz5NDv2VCGUQJtEMmLZb7yCdqe+jMJKfo9mxfL3NBvmcAN8iKgy29bfpaBO/oQjrc3UmMWvDjJKWp65dSK4uJhqgKsdJH95nw/v/EEGUJexogR5PsO9mis2TJtv9vf5+kAbB934H51fOT1bGpNTU1NTU1NTU1NTU1NTdX5B8CUtHwx6h//AAAAAElFTkSuQmCC"
+            alt="logo" class="logo" id="header-image">
+          <ul class="main-nav">
+            <li class="nav-link"><a href="file:///C:/EZz%20Manager/caloire/Calorie-Calculator/index.html">calorie
+                Calculator</a></li>
+            <li class="nav-link"><a href="file:///C:/EZz%20Manager/BMI%20CALCULATOR.html">BMI Calculator</a></li>
+            <li class="nav-link"><a href="file:///C:/EZz%20Manager/caloire/dashboard%20for%20health%20manager.html"
+                rel="internal">Health Manager</a></li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <section id="Home">
+
+        <div class="sign-up">
+          <h1>Ezz your diet</h1>
+          <p>EveryThing is Ezz with us</p>
+         
+        </div>
+      </section>
+      <section id="how-it-works">
+        <h2>How it works</h2>
+        <div class="row">
+          <div class="col span-1-of-2 steps-box">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dJlFmxiL11s" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+          </div>
+          <div class="col span-1-of-2 steps-box">
+            <div class="works-step">
+              <div>1</div>
+              <p>All the knowledge you need is provided over here!
+              </p>
+
+            </div>
+            <div class="works-step">
+              <div>2</div>
+              <p>Stay Focused on your Fitness goals
+              </p>
+
+            </div>
+            <div class="works-step">
+              <div>3</div>
+              <p>Working out daily is the key.Consistancy over Anything!!
+              </p>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section id="plans">
+        <div class="row">
+          <h2>Choose Your Preference and Diet Plans Are Provided Accordingly</h2>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <div class="plan-box">
+              <div>
+                <h3>To gain Weight</h3>
+                <p class="plan-price"><span> Bulking</span></p>
+              </div>
+              <ul>
+                <li> surplus calorie intake</li>
+                <li>Custom diet plan </li>
+                <li>For Bulking</li>
+              </ul>
+              <div>
+                <a href="file:///C:/EZz%20Manager/caloire/gain%20weight.html" class="btn btn-full">CLick to get Plans</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col span-1-of-3">
+            <div class="plan-box">
+              <div>
+                <h3>TO loose Weight </h3>
+                <p class="plan-price"><span> Shreding</span></p>
+              </div>
+              <ul>
+                <li>Diet Based On calorie Deficit</li>
+                <li>Amount of PRotien Intake </li>
+                <li>Customs Diets</li>
+              </ul>
+              <div>
+                <a href="file:///C:/EZz%20Manager/caloire/info2.html" class="btn btn-full">Click to get Plans</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col span-1-of-3">
+            <div class="plan-box">
+              <div>
+                <h3>Healthy lifestyle </h3>
+                <p class="plan-price"><span>Healthy</span></p>
+              </div>
+              <ul>
+                <li>Which food to replace</li>
+                <li>What to eat and what not to eat!</li>
+                <li>Special TRanning</li>
+              </ul>
+              <div>
+                <a href="file:///C:/EZz%20Manager/caloire/healthy%20lifestyle.html" class="btn btn-full">Click to get Plans</a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </section>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navia FeedBack Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  </head>
+  <body>
+    <div class="center">
+      <h2>Kindly fill the feedback form..</h2>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Feedback Please</button>
+    </div>
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="doctor1.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Full Name</b></label>
+      <input type="text" placeholder="Enter Your Full Name.." name="uname" required>
+
+      <label for="mob"><b>Mobile Number</b></label>
+      <input type="text" placeholder="Enter Mobile Number.." name="uname" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Your Email Address.." name="uname" required>
+
+      <label for="feedback"><b>Your Feedback</b></label>
+      <textarea id="feedback" name="feedback" placeholder="Write feedback.." style="height:200px"></textarea>
+
+      <button type="submit" class="button">Submit</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Send me newslatter
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Back to home <a href="file:///C:/EZz%20Manager/title/tailwind-admin-main/index.html">Home</a></span>
+    </div>
+  </form>
+</div>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+  </body>
+</html>
